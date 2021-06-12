@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: burlywood;
+  height: 100%;
+  width: 100%;
+}
+.world {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+.sky {
+  background: linear-gradient(lightblue 15%, burlywood);
+  height: 40vh;
+  display: flex;
+  position: relative;
+}
+.cloud1 img {
+  width: 160px;
+  opacity: 0.4;
+  animation: sky 80s linear infinite;
+  position: absolute;
+}
+.cloud2 img {
+  width: 200px;
+  opacity: 0.8;
+  animation: sky 30s linear infinite;
+  position: absolute;
+  top: 80px;
+}
+
+.grass {
+  background: linear-gradient(burlywood, darkolivegreen 90%);
+  height: 20vh;
+  position: relative;
+}
+.road {
+  background-color: darkslategray;
+  height: 35vh;
+  position: relative;
+  border-top: 8px rgb(28, 46, 46) solid;
+  border-bottom: 8px rgb(28, 46, 46) solid;
+}
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  height: 10px;
+  border-top: wheat 8px dashed;
+}
+.mario img {
+  position: absolute;
+  width: 100px;
+  top: -50px;
+  left: 0;
+  animation: drive 4s linear infinite;
+}
+@keyframes drive {
+  0% {
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateX(1200px);
+  }
+}
+@keyframes sky {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(1200px);
+  }
+}
